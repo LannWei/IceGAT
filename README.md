@@ -1,9 +1,9 @@
-# MGAT
-The official implementation of MGAT
-# This code is the implementation of MGAT
-[Multi-scale Graph Attention Network for Physics-informed Daily Arctic  Sea Ice Prediction]
+# IceGAT
+The official implementation of IceGAT
+# This code is the implementation of IceGAT
+[Multi-scale Graph Modeling and Forecasting of Arctic Sea Ice with Conservation Laws]
 
-Author: Lan Wei and Nikolaos M. Freris
+Authors: Lan Wei and Nikolaos M. Freris
 
 ## Usage
 First, clone the repository locally:
