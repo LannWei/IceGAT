@@ -30,6 +30,4 @@ pip install bayesian-optimization
 pip install open3d
 ```
 
-## Publications
-To be updated ...
-(If you have any questions, feel free to ask me via weilan@mail.ustc.edu.cn)
+xxx
