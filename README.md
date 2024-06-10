@@ -8,7 +8,7 @@ Authors: Lan Wei and Nikolaos M. Freris
 ## Usage
 First, clone the repository locally:
 ```
-git clone https://github.com/LannWei/MGAT.git
+git clone https://github.com/LannWei/IceGAT.git
 ```
 Then, install PyTorch == 1.7.1+cu110\\
 prchvision == 0.8.2+cu110 \\
@@ -30,4 +30,4 @@ pip install bayesian-optimization
 pip install open3d
 ```
 
-xxx
+

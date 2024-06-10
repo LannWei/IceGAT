@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>IceGAT</title>
+  <link rel="stylesheet" href="./static/css/normalize.min.css">
+  <link rel="stylesheet" href="./static/css/style.css">
+  <link rel="stylesheet" href="./static/css/iconfont.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+  <header>
+    <div class="container">
+      <nav id="navigation">
+        <a href="#" class="logo">IceGAT</a>
+        <a aria-label="mobile menu" class="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+          <ul class="menu-left">
+            <li><a href="#About">About</a></li>
+            <li><a href="#exp">Demo</a></li>
+            <!-- <li><a href="#skills">Skills</a></li> -->
+            <li><a href="#Code">Code</a></li>
+            <li><a href="#Contact">Contact</a></li>
+          </ul>
+      </nav>
+    </div>
+  </header>
+
+<section id="title">
+  <h1>Arctic Sea Ice Forecasting based on Multi-scale Graph Modeling with Conservation Laws</h1>
+  <p style="font-size:20px;"> Authors: 
+    <a style = "text-decoration: underline"  href="https://scholar.google.com/citations?user=DOkab9UAAAAJ&hl=en" target="_blank">Lan Wei</a> 
+    and 
+    <a style = "text-decoration: underline" href="http://staff.ustc.edu.cn/~nfr/" target="_blank">Nikolaos M. Freris</a>
+  </p>
+  <p style="font-size:20px;">University of Science and Technology of China
+  </p>
+</section>
+
+<section id="About">
+<div class="container">
+  <!-- <h1>Multi-scale Graph Modeling and Forecasting of Arctic Sea Ice with Conservation Laws</h1>
+  <p>Authors: Lan Wei and Nikolaos M. Freris
+  <p>University of Science and Technology of China
+  </p> -->
+  <h2>Project Introduction</h2>
+  <p style="text-align:justify; padding: 0 20px;">Arctic sea ice prediction is critical for exploring climate change, resource extraction, and shipping route planning.
+    This project introduces IceGAT, a novel model for sea ice concentration (SIC) prediction. 
+    It captures complex weather dynamics across different scales through a series of graphs that represent interactions at different ranges, along with the design of an efficient fusion mechanism. 
+    An additional novelty is the incorporation of physical conservation laws for potential vorticity and moisture, enhancing prediction accuracy and robustness.
+    To the best of our knowledge, IceGAT is the first model to use the finest 1-hour temporal granularity, significantly improving SIC prediction accuracy. 
+    Our method also uniquely considers input data across different pressure levels, identifying the optimal horizon for single-day SIC prediction as five days. 
+  </p>
+  </div>
+</section>
+
+<section id="exp">
+  <div class="container" id="carouselTitle">
+    <h2>Visiualization</h2>
+    <!-- <p>(Demo updated on: <span id="update-time-placeholder"></span>) </p> -->
+    <p>(Demo updated on: PUSH TIME) </p >
+    <p>The latest data provided by <a style = "text-decoration: underline ; color :blue;" href="https://cds.climate.copernicus.eu/cdsapp#!/home" target="_blank">ECMWF ERA5 Dataset </a>  is <span id="date-placeholder">Date</span>
+    </p>
+  </div>
+    <div class="carousel" id="img-container">
+      <div class="carousel__nav">
+        <div class="indicator">
+          <div class="indicator-bar"></div>
+        </div>   
+        <span id="moveFirst" class="carousel__arrow">
+            <span class="iconfont icon-first"></span>
+        </span>
+        <span id="moveLeft" class="carousel__arrow">
+            <span class="iconfont icon-first2"></span>
+        </span>
+        <span id="play" class="carousel__arrow">
+            <span class="iconfont icon-play"></span>
+        </span>
+        <span id="moveRight" class="carousel__arrow" >
+          <span class="iconfont icon-last2"></span>   
+        </span>
+        <span id="timeMsg"></span>
+      </div>
+      
+      <!-- img lists -->
+    </div>
+  </div>
+</section>
+
+<!-- <section id="skills">
+  <div class="container">
+  <h1>skills</h1></div>
+</section> -->
+
+<section id="Code">
+  <div class="container">
+    <h2>Code</h2>
+    <p><a style = "text-decoration: underline ; color :blue;"
+      href="https://github.com/LannWei/IceGAT" target="_blank">https://github.com/LannWei/IceGAT</a></p>
+  </div>
+</section>
+
+<section id="Contact">
+  <div class="container">
+  <h2>Contact</h2>
+  <p>If you have any questions, feel free to ask me via: weilan@mail.ustc.edu.cn</p>
+  </div>
+</section>
+<!-- partial -->
+<script  src="./static/js/jquery.min.js">  </script>
+<script  src="./static/js/jquery.easing.min.js">  </script>
+<script  src="./static/js/script.js">  </script>
+<script  src="./static/js/iconfont.js"></script>
+
+<script>
+  // 获取当前日期的前六天对应的日期
+  function getPreviousDate(daysAgo) {
+    var date = new Date();
+    date.setDate(date.getDate() - daysAgo);
+    var options = { year: 'numeric', month: 'short', day: '2-digit' };
+    return date.toLocaleDateString('en-US', options);
+  }
+  function getCurrentDateTime() {
+    var date = new Date();
+    var options = { year: 'numeric', month: 'short', day: '2-digit'};
+    return date.toLocaleDateString('en-US', options);
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var datePlaceholder = document.getElementById('date-placeholder');
+    datePlaceholder.textContent = getPreviousDate(6); // 前六天的日期
+    var updateTimePlaceholder = document.getElementById('update-time-placeholder');
+    updateTimePlaceholder.textContent = getCurrentDateTime();
+  });
+</script>
+
+</body>
+</html>
