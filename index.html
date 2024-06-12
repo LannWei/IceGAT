@@ -46,25 +46,32 @@
   <p>Authors: Lan Wei and Nikolaos M. Freris
   <p>University of Science and Technology of China
   </p> -->
-  <h2>Project Introduction</h2>
+  <h2>Introduction</h2>
   <p style="text-align:justify; padding: 0 20px;">Arctic sea ice prediction is critical for exploring climate change, resource extraction, and shipping route planning.
+<<<<<<< HEAD
   This paper introduces IceGAT, a novel model for sea ice concentration (SIC) prediction. 
   It captures complex weather dynamics across different scales through a series of graphs that represent interactions at different ranges, along with the design of an efficient fusion mechanism. 
   An additional novelty is the incorporation of physical conservation laws for potential vorticity and moisture, enhancing prediction accuracy.
   To the best of our knowledge, IceGAT is the first model to use the finest 1-hour temporal granularity, significantly improving SIC prediction accuracy. 
   Our method also uniquely considers input data across different pressure levels, identifying the optimal horizon for single-day SIC prediction as five days. 
+=======
+    This paper introduces IceGAT, a model for sea ice concentration (SIC) prediction. 
+    It captures complex weather dynamics across different scales through a series of graphs that represent interactions at different ranges, along with an efficient fusion mechanism. 
+    An additional novelty is the incorporation of physical conservation laws for potential vorticity and moisture, enhancing prediction accuracy.
+    Our method considers input data across various pressure levels, identifying the optimal horizon for single-day SIC prediction as five days. 
+>>>>>>> 9f9a0384f486c650345e6b825867bed61bb34fba
   </p>
   </div>
 </section>
 
 <section id="exp">
   <div class="container" id="carouselTitle">
-    <h2>Visiualization</h2>
+    <h2>Visualization</h2>
     <!-- <p>(Demo updated on: <span id="update-time-placeholder"></span>) </p> -->
     <p>(Demo updated on: Updating) </p >
     <p>The latest data provided by <a style = "text-decoration: underline ; color :blue;" href="https://cds.climate.copernicus.eu/cdsapp#!/home" target="_blank">ECMWF ERA5 Dataset </a>  is <span id="date-placeholder">Date</span>.
     </p>
-    <p>SIC is the sea ice-covered area relative to the total at a given location in the ocean and thus ranges from 0 (blue) to 1 (write), which corresponds to ice-free to fully ice-covered conditions.</p>
+    <p>SIC is the sea ice-covered area relative to the total at a given location in the ocean and thus ranges from 0 (blue) to 1 (white), which corresponds to ice-free to fully ice-covered conditions.</p>
   </div>
     <div class="carousel" id="img-container">
       <div class="carousel__nav">
