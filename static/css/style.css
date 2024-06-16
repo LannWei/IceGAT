@@ -337,7 +337,7 @@ body {
 .carousel-item {
     visibility:visible;
     width: 95%;
-    height: 95%;
+    height: 90%;
     background-color: #fff;
    -webkit-flex-shrink: 0;
     position: absolute;
