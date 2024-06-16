@@ -326,7 +326,7 @@ body {
 
 .carousel {
     width: 62%;
-    height: 56%;
+    height: 75%;
     display: flex;
     overflow: hidden;
     position: relative;
