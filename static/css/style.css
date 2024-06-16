@@ -343,7 +343,7 @@ body {
     position: absolute;
     top: .2vw;
     left: .8vw;
-    transition: 0.01s all ease;
+    transition: 0.01s all ease;56
 }
 
 .carousel-item__image {
