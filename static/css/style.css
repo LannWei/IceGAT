@@ -341,7 +341,7 @@ body {
     background-color: #fff;
    -webkit-flex-shrink: 0;
     position: absolute;
-    top: .2vw;
+    top: 2vw;
     left: .8vw;
     transition: 0.01s all ease;
 }
