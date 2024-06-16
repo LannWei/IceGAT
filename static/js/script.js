@@ -33,17 +33,17 @@ function limitDist() {
 $(document).ready(function() {
   // 预定义图片文件名列表
   var imageList = [
-      '0_ref_0.png',
-      '0_ref_1.png',
-      '0_ref_2.png',
-      '0_ref_3.png',
-      '0_ref_4.png',
-      '0_ref_5.png',
-      'prediction_0.png',
-      'prediction_1.png',
-      'prediction_2.png',
-      'prediction_3.png',
-      'prediction_4.png',
+      'image_0.png',
+      'image_1.png',
+      'image_2.png',
+      'image_3.png',
+      'image_4.png',
+      'image_5.png',
+      'image_6.png',
+      'image_7.png',
+      'image_8.png',
+      'image_9.png',
+      'image_10.png',
   ];
   // console.log("=================", imageList)
 
