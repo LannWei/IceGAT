@@ -326,7 +326,7 @@ body {
 
 .carousel {
     width: 62%;
-    height: 56%;
+    height: 62%;
     display: flex;
     overflow: hidden;
     position: relative;
@@ -341,7 +341,7 @@ body {
     background-color: #fff;
    -webkit-flex-shrink: 0;
     position: absolute;
-    top: 2vw;
+    top: .2vw;
     left: .8vw;
     transition: 0.01s all ease;
 }
