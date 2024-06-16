@@ -323,9 +323,10 @@ body {
   width: 80vw;
 }
 
+
 .carousel {
-    width: 50%;
-    height: 50%;
+    width: 62%;
+    height: 56%;
     display: flex;
     overflow: hidden;
     position: relative;
@@ -335,13 +336,13 @@ body {
 
 .carousel-item {
     visibility:visible;
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 95%;
     background-color: #fff;
    -webkit-flex-shrink: 0;
     position: absolute;
-    top: -20px;
-    transform: translateX(100%);
+    top: -.9vw;
+    left: .8vw;
     transition: 0.01s all ease;
 }
 
@@ -356,62 +357,81 @@ body {
 }
 
 .carousel__nav {
-  position: absolute;
-  width: 100%;
-  height: 40px;
-  right: 0;
-  z-index: 2;
-  background-color: #fff;
-  text-align: left;
-  padding-left: .6vw;
-  bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 3.4vw;
+    right: 0;
+    z-index: 2;
+    background-color:#fff;
+    text-align: left;
+    padding-left: .6vw;
+    bottom: 0;
+    white-space: nowrap;
+    font-size: 1vw;
 }
 
 .indicator {
-width:100%; 
-height:3px; 
-background-color:rgb(255, 209, 209); 
-position:relative; 
-margin-left: -.6vw;
-margin-bottom: -3px;
+  width:101%; 
+  height:3px; 
+  background-color:rgb(255, 209, 209); 
+  position: relative; 
+  margin-left: -.6vw;
+  margin-bottom: -3px;
 }
 
 .indicator-bar {
-width: 0;
-height: 3px;
-background-color: #333;
-position: absolute;
-left: 0;
-top: 0;
+  width: 0;
+  height: 3px;
+  background-color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .indicator-line {
-width: 2px;
-height: 3px;
-background-color: rgba(51, 51, 51, 0.6);
-position: absolute;
-top: 0;
+  width: 2px;
+  height: 3px;
+  background-color: rgba(51, 51, 51, 0.6);
+  position: absolute;
+  top: 0;
 }
 
+.carousel__nav>span {
+  display: inline-block;
+  vertical-align: middle;
+  margin: auto 0;
+}
+
+.iconfont {
+  font-size: 1.3vw !important;
+}
+
+.matrices {
+  padding: .6vw .6vw;
+  padding-top: .7vw;
+  margin-left: 1vw;
+  line-height: 1.25vw;
+}
 
 .carousel__arrow {
-  cursor: pointer;
-  display: inline-block;
-  padding: 11px .6vw;
-  position: relative;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0vw .6vw;
+    position: relative;
 }
 
 .carousel__arrow:nth-child(5) {
-  margin-right: 2.4vw;
+    margin-right: 2.4vw;
 }
 
 .carousel__arrow:nth-child(5):after {
-  content:'';
-  right: -1.2vw;
-  position: absolute;
-  width: 1px;
-  background-color: #b0b0b0;
-  height: 22px;
-  top: 50%;
-  margin-top: -9px;
+    content:'';
+    right: -1.2vw;
+    position: absolute;
+    width: 1px;
+    background-color: #b0b0b0;
+    height: 1.5vw;
+    top: 50%;
+    margin-top: -.6vw;
 }

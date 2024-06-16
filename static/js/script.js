@@ -30,20 +30,76 @@ function limitDist() {
   $expSection.css('margin-top', (30-dist2)+'px');
 }
 
+function getData(filePath) {
+  return new Promise((resolve, reject) => {
+    $.ajax({
+      url: filePath,
+      dataType: 'text',
+      success: function(data) {
+        const regex = /tensor\(([\d.]+),/g;
+        let match;
+        const values = [];
+  
+        while ((match = regex.exec(data)) !== null) {
+          values.push(parseFloat(match[1]).toFixed(2));
+        }
+  
+        differences = ['N/A']
+        for (let i = 0; i < values.length - 1; i++) {
+          const diff = values[i+1] - values[i];
+          differences.push(diff.toFixed(2));
+        }
+        resolve({ values, differences });
+      },
+      error: function() {
+        console.log('An error occurred while loading the file.');
+        reject('An error occurred while loading the file.');
+      }
+    });
+  })
+}
+
+function setmatricesText(sia, siad, sie, sied) {
+  console.log(sia, siad, sie, sied)
+  $('#sia').html('<span style="font-weight: bold;">SIA:</span> <span style="color: #666;">' + sia + "</span> mil km<sup>2</sup>");
+  $('#siad').html('<span style="font-weight: bold;">SIA &#x0394;:</span> <span style="color: #666;">' + siad + "</span> mil km<sup>2</sup>");
+  $('#sie').html('<span style="font-weight: bold;">SIE:</span> <span style="color: #666;">' + sie + "</span> mil km<sup>2</sup>");
+  $('#sied').html('<span style="font-weight: bold;">SIE &#x0394;:</span> <span style="color: #666;">' + sied + "</span> mil km<sup>2</sup>");
+}
+
+var SIAValues=[], SIADiffs=[], SIEValues=[], SIEDiffs = []
+
 $(document).ready(function() {
+  const SIAPath = './resource/SIA.txt'; 
+  const SIEPath = './resource/SIE.txt'; 
+
+  
+  Promise.all([getData(SIAPath), getData(SIEPath)]).then(results => {
+    const result1 = results[0];
+    const result2 = results[1];
+
+    SIAValues = result1.values;
+    SIADiffs = result1.differences;
+
+    
+    SIEValues = result2.values;
+    SIEDiffs = result2.differences;
+    setmatricesText(SIAValues[0], SIADiffs[0], SIEValues[0], SIEDiffs[0])
+  })
+
   // 预定义图片文件名列表
-  var imageList = [
-      'image_0.png',
-      'image_1.png',
-      'image_2.png',
-      'image_3.png',
-      'image_4.png',
-      'image_5.png',
-      'image_6.png',
-      'image_7.png',
-      'image_8.png',
-      'image_9.png',
-      'image_10.png',
+  let imageList = [
+    'image_0.png',
+    'image_1.png',
+    'image_2.png',
+    'image_3.png',
+    'image_4.png',
+    'image_5.png',
+    'image_6.png',
+    'image_7.png',
+    'image_8.png',
+    'image_9.png',
+    'image_10.png',
   ];
   // console.log("=================", imageList)
 
@@ -256,6 +312,7 @@ $(function(){
   // 切换图片
   function setSlide(prev, next){
     $("#timeMsg").text(strList[next]);
+    setmatricesText(SIAValues[next], SIADiffs[next], SIEValues[next], SIEDiffs[next])
     var slide = next;
     if (prev > slide) {
       $('.carousel-item').eq(prev).removeClass('active');
