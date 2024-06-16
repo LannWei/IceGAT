@@ -343,6 +343,7 @@ body {
     position: absolute;
     top: .4vw;
     left: .8vw;
+    transform: translateX(100%);
     transition: 0.01s all ease;
 }
 
