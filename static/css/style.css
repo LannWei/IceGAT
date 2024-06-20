@@ -334,6 +334,15 @@ body {
     background-color: #fff;
 }
 
+.info {
+  position: absolute;
+  left: 1.6vw;
+  bottom: 4.5vw;
+  z-index: 100;
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+
 .carousel-item {
     visibility:visible;
     width: 95%;

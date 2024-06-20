@@ -84,7 +84,6 @@ $(document).ready(function() {
     
     SIEValues = result2.values;
     SIEDiffs = result2.differences;
-    setmatricesText(SIAValues[0], SIADiffs[0], SIEValues[0], SIEDiffs[0])
   })
 
   // 预定义图片文件名列表
@@ -133,11 +132,6 @@ $(document).ready(function() {
 
   for (let i=9; i>=-1; i--) {
     let str = getPreviousDate(i);
-    if (i <= 5) {
-      str = "(Pred) " + str;
-    } else {
-      str = "(Ref) " + str;
-    }
     strList.push(str)
   }
 });
@@ -223,7 +217,6 @@ $(function(){
   // $('.carousel-item').eq(0).addClass('active');
   var total = $('.carousel-item').length;
   var current = 0;
-  $("#timeMsg").text(strList[0]);
   var palying = false;
   var $indicator = $('.indicator');
   var $indicatorBar = $('.indicator-bar');
@@ -234,8 +227,7 @@ $(function(){
     let $indicatorLine = $('<div>').attr('class', 'indicator-line').css('left', percentage+'%');
     $indicator.append($indicatorLine);
   }
-  updateIndicator();
-  // setSlide(0, 0);
+  setSlide(0, 0);
 
   /* 移动到第一张图片 */
   $('#moveFirst').on('click', function(){
@@ -312,6 +304,11 @@ $(function(){
   
   // 切换图片
   function setSlide(prev, next){
+    if (next < 4) {
+      $('.info').html('<span>Ground Truth</span>');
+    } else {
+      $('.info').html('<span style="color:blue;">Prediction</span>');
+    }
     $("#timeMsg").text(strList[next]);
     setmatricesText(SIAValues[next], SIADiffs[next], SIEValues[next], SIEDiffs[next])
     var slide = next;

@@ -46,12 +46,19 @@
   <p>Authors: Lan Wei and Nikolaos M. Freris
   <p>University of Science and Technology of China
   </p> -->
-  <h2>Introduction</h2>
+  <h2>Description</h2>
   <p style="text-align:justify; padding: 0 20px;">
-  This is the demo for IceGAT, a model for predicting the sea ice concentration (SIC). 
+  This is the demo for IceGAT, a model for predicting the sea ice concentration (SIC) in the North Arctic. 
   Using the daily updated data from the ERA5 dataset, we plotted the ground-truth SIC for four days, followed by the prediction for one week.
-  SIC is the sea ice-covered area relative to the total at a given location in the ocean and thus ranges from 0 (blue) to 1 (white), which corresponds to ice-free to fully ice-covered conditions.
-  Sea ice extent (SIE) is the integral sum of the areas of all cells with at least 15% ice concentration, while sea ice area (SIA) is the integral sum of the product of ice concentration and area of all cells with at least 15% ice concentration.
+  When you click the button below the figure, you can see the change of sea ice together with the corresponding date, sea ice extent (SIE), sea ice area (SIA), and the change in in mil km<sup>2</sup>.
+  </p>
+  <p style="text-align:justify; padding: 0 20px"><span style="font-weight: bold;">Definition:</span><br>
+  1. <span style="font-weight: bold;">SIC</span> is the sea ice-covered area relative to the total at a given location in the ocean and thus ranges from 0 (blue) to 1 (white), which corresponds to ice-free to fully ice-covered conditions.<br>
+  2. <span style="font-weight: bold;">SIE</span> is the integral sum of the areas of all cells with at least 15% ice concentration.<br>
+  3. <span style="font-weight: bold;">SIA</span> is the integral sum of the product of ice concentration and area of all cells with at least 15% ice concentration.<br>
+  4. <span style="font-weight: bold;">&#x0394</span> is the change from the previous day to the current.
+  </p>
+  
   <!-- Arctic sea ice prediction is critical for exploring climate change, resource extraction, and shipping route planning.
   This paper introduces IceGAT, a novel model for sea ice concentration (SIC) prediction. 
   It captures complex weather dynamics across different scales through a series of graphs that represent interactions at different ranges, along with the design of an efficient fusion mechanism. 
@@ -99,6 +106,7 @@
         </span>
       </div>
       
+      <div class="info">Ground Truth</div>
       <!-- img lists -->
     </div>
   </div>
