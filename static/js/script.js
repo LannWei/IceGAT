@@ -84,6 +84,8 @@ $(document).ready(function() {
     
     SIEValues = result2.values;
     SIEDiffs = result2.differences;
+    
+    setmatricesText(SIAValues[0], SIADiffs[0], SIEValues[0], SIEDiffs[0])
   })
 
   // 预定义图片文件名列表
@@ -217,6 +219,7 @@ $(function(){
   // $('.carousel-item').eq(0).addClass('active');
   var total = $('.carousel-item').length;
   var current = 0;
+  $("#timeMsg").text(strList[0]);
   var palying = false;
   var $indicator = $('.indicator');
   var $indicatorBar = $('.indicator-bar');
@@ -227,7 +230,8 @@ $(function(){
     let $indicatorLine = $('<div>').attr('class', 'indicator-line').css('left', percentage+'%');
     $indicator.append($indicatorLine);
   }
-  setSlide(0, 0);
+  updateIndicator();
+  // setSlide(0, 0);
 
   /* 移动到第一张图片 */
   $('#moveFirst').on('click', function(){
