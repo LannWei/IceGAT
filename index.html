@@ -48,14 +48,14 @@
   </p> -->
   <h2>Description</h2>
   <p style="text-align:justify; padding: 0 20px;">
-  This is the demo for IceGAT, a model for predicting the sea ice concentration (SIC) in the North Arctic. 
-  Using the daily updated data from the ERA5 dataset, we plotted the ground-truth SIC for four days, followed by the prediction for one week.
-  When you click the button below the figure, you can see the change of sea ice together with the corresponding date, sea ice extent (SIE), sea ice area (SIA), and the change in mil km<sup>2</sup>.
+  This is the demo for IceGAT, a neural network for predicting the sea ice concentration in the Arctic. 
+  Using the daily updated data from the ERA5 dataset (with a lag of 5 days), we plot the ground-truth for four days, followed by the prediction for one week.
+  When you click the button below the figure, you can see the visualization of the ice for each day along with the numbers for sea ice extent (SIE), sea ice area (SIA), and the corresponding changes (&#x0394) between coinsecutive days.
   </p>
-  <p style="text-align:justify; padding: 0 20px"><span style="font-weight: bold;">Definition:</span><br>
-  1. <span style="font-weight: bold;">SIC</span> is the sea ice-covered area relative to the total at a given location in the ocean and thus ranges from 0 (blue) to 1 (white), which corresponds to ice-free to fully ice-covered conditions.<br>
-  2. <span style="font-weight: bold;">SIE</span> is the integral sum of the areas of all cells with at least 15% ice concentration.<br>
-  3. <span style="font-weight: bold;">SIA</span> is the integral sum of the product of ice concentration and area of all cells with at least 15% ice concentration.<br>
+  <p style="text-align:justify; padding: 0 20px"><span style="font-weight: bold;">Definitions:</span><br>
+  1. <span style="font-weight: bold;">SIC</span> is the sea ice concentration ([0,1]; see the color bar).<br>
+  2. <span style="font-weight: bold;">SIE</span> is the integral sum of the areas with at least 15% ice concentration.<br>
+  3. <span style="font-weight: bold;">SIA</span> the total sea ice area (excluding regions below 15% concentration).<br>
   4. <span style="font-weight: bold;">&#x0394</span> is the change from the previous day to the current.
   </p>
   
@@ -73,8 +73,8 @@
   <div class="container" id="carouselTitle">
     <h2>Visualization</h2>
     <!-- <p>(Demo updated on: <span id="update-time-placeholder"></span>) </p> -->
-    <p>(Demo updated on: Jun 23, 2024, 08:01:23 AM) </p >
-    <p>The latest data provided by <a style = "text-decoration: underline ; color :blue;" href="https://cds.climate.copernicus.eu/cdsapp#!/home" target="_blank">ECMWF ERA5 Dataset </a>  is <span id="date-placeholder">Date</span>.
+    <p>(Demo updated on: Updating (GMT+8)) </p >
+    <p>The latest data provided by <a style = "text-decoration: underline ; color :blue;" href="https://cds.climate.copernicus.eu/cdsapp#!/home" target="_blank">ECMWF ERA5 Dataset </a>  is <span id="date-placeholder">Date</span>, 23:00 AM (GMT+0).
     </p>
     <!-- <p>SIC is the sea ice-covered area relative to the total at a given location in the ocean and thus ranges from 0 (blue) to 1 (white), which corresponds to ice-free to fully ice-covered conditions.</p> -->
   </div>
@@ -107,6 +107,7 @@
       </div>
       
       <div class="info">Ground Truth</div>
+      <div class="colorbar"></div>
       <!-- img lists -->
     </div>
   </div>

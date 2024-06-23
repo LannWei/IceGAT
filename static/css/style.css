@@ -343,6 +343,22 @@ body {
   font-weight: bold;
 }
 
+.colorbar {
+  position: absolute;
+  width: 3.5vw;
+  height: 22.99vw;
+  left: 1vw;
+  bottom: 12vw;
+  z-index: 100;
+
+  background-color: #000;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-image: url('../../static/colorbar_ver.png');
+}
+
 .carousel-item {
     visibility:visible;
     width: 95%;
@@ -350,7 +366,7 @@ body {
     background-color: #fff;
    -webkit-flex-shrink: 0;
     position: absolute;
-    top: .4vw;
+    top: 0.4vw;
     left: .8vw;
     transform: translateX(100%);
     transition: 0.01s all ease;
