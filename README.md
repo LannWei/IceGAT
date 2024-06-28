@@ -1,7 +1,7 @@
 # IceGAT
 The official implementation of IceGAT
 # This code is the implementation of IceGAT
-[Arctic Sea Ice Forecasting based on Multi-scale Graph Modeling with Conservation Laws]
+[Arctic Sea Ice Prediction based on Multi-scale Graph Modeling with Conservation Laws]
 
 Authors: Lan Wei and Nikolaos M. Freris
 
