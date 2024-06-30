@@ -11,7 +11,7 @@ function limitDist() {
   // 限制section exp 和 section Code之间的间距
   let $carousel = $('.carousel');
   let $expSection = $('#exp');
-  let $aftSection = $('#Code');
+  let $aftSection = $('#Video');
 
   let offset1 = $carousel.offset();
   let offset2 = $expSection.offset();
@@ -123,12 +123,14 @@ $(document).ready(function() {
   let screenWidth = $(window).width();
   let dist = 200 - 0.1*screenWidth
   $('#exp').css('margin-left', -dist+'px')
+  $('#Video').css('margin-left', -dist+'px')
   limitDist()
 
   $(window).resize(function() { // 窗口调整时，居中
     let screenWidth = $(window).width();
     let dist = 200 - 0.1*screenWidth
     $('#exp').css('margin-left', -dist+'px')
+    $('#Video').css('margin-left', -dist+'px')
     limitDist()
   });
 

@@ -323,6 +323,14 @@ body {
   width: 80vw;
 }
 
+#Video {
+  width: 80vw;
+}
+
+#Video .container {
+  width: 62%;
+  margin: auto;
+}
 
 .carousel {
     width: 62%;
