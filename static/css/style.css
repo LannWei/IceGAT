@@ -316,7 +316,20 @@ html, body {
 body {
     background-color: #eaeaea;
 } */
+.definition-item {
+  display: flex; /* 使用 Flex 布局分离序号和文本 */
+  align-items: flex-start; /* 对齐顶部 */
+}
 
+.definition-item .number {
+  flex: 0 0 1em; /* 固定序号宽度 */
+  text-align: right; /* 序号右对齐 */
+  margin-right: 0.5em; /* 调整序号和文本的间距 */
+}
+
+.definition-item span {
+  flex: 1; /* 文本部分占满剩余空间 */
+}
 
 #exp {
   height: 80vw;

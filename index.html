@@ -47,16 +47,29 @@
   <p>University of Science and Technology of China
   </p> -->
   <h2>Description</h2>
-  <p style="text-align:justify; padding: 0 20px;">
+  <p style="text-align:left; padding: 0 20px;">
   This is the demo for IceGAT, a neural network for predicting the sea ice concentration in the Arctic. 
   Using the daily updated data from the ERA5 dataset (with a lag of 5 days), we plot the ground-truth for four days, followed by the prediction for one week.
   When you click the button below the figure, you can see the visualization of the ice for each day along with the numbers for sea ice extent (SIE), sea ice area (SIA), and the corresponding changes (&#x0394) between consecutive days.
   </p>
-  <p style="text-align:justify; padding: 0 20px"><span style="font-weight: bold;">Definitions:</span><br>
-  1. <span style="font-weight: bold;">SIC</span> is the sea ice concentration ([0,1]; see the color bar).<br>
-  2. <span style="font-weight: bold;">SIE</span> is the integral sum of the areas with at least 15% ice concentration.<br>
-  3. <span style="font-weight: bold;">SIA</span> is the total sea ice area (excluding regions below 15% concentration).<br>
-  4. <span style="font-weight: bold;">&#x0394</span> is the change from the previous day to the current.
+  <p style="text-align:justify; padding: 0 20px">
+    <span style="font-weight: bold;">Definitions:</span>
+    <span class="definition-item">
+      <span class="number">1.</span>
+      <span><span style="font-weight: bold;">SIC</span> is the sea ice concentration ([0,1]; see the color bar).</span>
+    </span>
+    <span class="definition-item">
+      <span class="number">2.</span>
+      <span><span style="font-weight: bold;">SIE</span> is the integral sum of the areas with at least 15% ice concentration.</span>
+    </span>
+    <span class="definition-item">
+      <span class="number">3.</span>
+      <span><span style="font-weight: bold;">SIA</span> is the total sea ice area (excluding regions below 15% concentration).</span>
+    </span>
+    <span class="definition-item">
+      <span class="number">4.</span>
+      <span><span style="font-weight: bold;">&#x0394</span> is the change from the previous day to the current.</span>
+    </span>
   </p>
   
   <!-- Arctic sea ice prediction is critical for exploring climate change, resource extraction, and shipping route planning.
