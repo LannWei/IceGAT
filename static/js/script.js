@@ -36,7 +36,7 @@ function getData(filePath) {
       url: filePath,
       dataType: 'text',
       success: function(data) {
-        const regex = /tensor\(([\d.]+),/g;
+        const regex = /tensor\(([\d.]+)\)/g;
         let match;
         const values = [];
   
