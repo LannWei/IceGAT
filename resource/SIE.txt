@@ -1,1 +1,1 @@
-[tensor(14.4208, device='cuda:0'), tensor(14.4112, device='cuda:0'), tensor(14.4690, device='cuda:0'), tensor(14.5386, device='cuda:0'), tensor(14.5655, device='cuda:0'), tensor(14.5308, device='cuda:0'), tensor(14.6134, device='cuda:0'), tensor(14.5661, device='cuda:0'), tensor(14.4658, device='cuda:0'), tensor(14.3794, device='cuda:0'), tensor(14.3147, device='cuda:0')]
+[tensor(14.5290), tensor(14.5013), tensor(14.4390), tensor(14.4120), tensor(14.3541), tensor(14.3253), tensor(14.3698), tensor(14.3133), tensor(14.2412), tensor(14.1563), tensor(14.1095)]
