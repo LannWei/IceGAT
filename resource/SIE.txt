@@ -1,1 +1,1 @@
-[tensor(7.8738), tensor(7.6604), tensor(7.5364), tensor(7.5074), tensor(7.4058), tensor(7.2775), tensor(7.3638), tensor(7.4314), tensor(7.4850), tensor(7.4933), tensor(7.5393)]
+[tensor(5.9116), tensor(5.8457), tensor(5.7550), tensor(5.6651), tensor(5.5616), tensor(5.4783), tensor(5.5185), tensor(5.6132), tensor(5.6974), tensor(5.8696), tensor(6.0269)]
