@@ -1,1 +1,1 @@
-[tensor(8.8837), tensor(8.9509), tensor(8.9784), tensor(9.0000), tensor(8.9583), tensor(9.0270), tensor(9.0721), tensor(9.0688), tensor(9.0559), tensor(9.0309), tensor(9.0202)]
+[tensor(8.9784), tensor(9.0000), tensor(8.9583), tensor(9.0270), tensor(9.0752), tensor(9.1330), tensor(9.2213), tensor(9.2720), tensor(9.2870), tensor(9.2698), tensor(9.2655)]
